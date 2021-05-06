@@ -1,0 +1,84 @@
+// relief section 
+.relief{
+	margin: 3rem 0;
+	&__wrapper{
+		&-btns{
+			padding:0;
+			&-btn{
+				cursor:pointer;
+				display: inline-block;
+				padding: 1rem 2rem;
+				background: #bbb;
+				text-transform: uppercase;
+				font-weight: 900;
+				color: #444;
+				&.active{
+					color: white;
+					background: $primary-clr;
+					&:nth-of-type(2){
+					background: $primary-clr;
+					margin: -4px;
+					}
+					&:nth-of-type(3){
+					background: $primary-clr;
+					margin: -2px;
+				}
+				}
+				&:nth-of-type(2){
+					background: #ccc;
+					margin: -4px;				
+				}
+				&:nth-of-type(3){
+					background: #eee;
+					margin: -2px;
+				}
+			}
+		}
+		&-content{
+		&-img {
+			display: none;
+			&.active{
+			display: flex !important;
+			justify-content: flex-start;
+			align-items: center;
+			background: #f7f7f7;
+				display:block;
+			}
+		}
+		&-text{
+			padding: 2rem 4rem;
+			h3{
+				font-size: 1.2rem;
+				padding: 1rem 0;
+				text-transform: uppercase;
+				color: #444;
+			}
+			p{
+				font-size: 1rem;
+				font-weight: 100;
+				color: #444;
+				line-height: 1.5;
+			}
+			&-btn {
+				cursor: pointer;
+				display: inline-block;
+				margin-top: 1rem;
+				padding: 1.2rem 2.4rem;
+				background-color: #444;
+				color: white;
+				text-transform: uppercase;
+				text-decoration: none;
+				box-shadow: 8px 8px 0 $primary-clr;
+				opacity: 0.8;
+				transition: .3s ease-in box-shadow, .3s ease-in opacity;
+				&:focus,
+				&:hover{
+					box-shadow: none;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	}
+
+}

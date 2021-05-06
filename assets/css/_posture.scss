@@ -1,0 +1,140 @@
+.posture{
+	background-color: #e5e5e5;
+	margin: 5rem 0;
+	&__figure{
+		position: relative;
+		width: 100%;
+		display: block;
+		text-align: center;
+		z-index: 0;
+		&-img{
+			max-width: 500px;
+			width: 100%;
+		
+		}
+		&-circle{
+			cursor: pointer;
+			position: absolute;
+			top:6%;
+			left:53%;
+			color: white;
+			display: grid;
+			place-items: center;
+			font-size: .75rem;
+			width:30px;
+			height: 30px;
+			background: tomato;
+			border-radius: 50%;
+			border: 6px solid rgba(241, 32, 32, 0.322);
+			z-index: 10;
+			&.show{
+				background: $primary-clr;
+				border: 6px solid rgba($primary-clr, 0.322);
+				&::after{
+					background: $primary-clr;
+				}
+			}
+			&:nth-of-type(2){
+				top:23%;
+				left:45%;
+			}
+			&:nth-of-type(3){
+				top:36%;
+				left:38%;
+			}
+			&:nth-of-type(4){
+				top:48%;
+				left:48%;
+
+			}
+			&:nth-of-type(5){
+				top:78%;
+				left:48%;
+
+				
+			}
+
+			&::after{
+				content: '';
+				position: absolute;
+				width:32px;
+				height: 32px;
+				background: tomato;
+				border-radius: 50%;
+				animation: pulse 2000ms infinite;
+				z-index: -1;
+			}
+		}
+	}
+	&__content{
+		position: relative;
+		&-item{
+			position: absolute;
+			top:50%;
+			left:50%;
+			background: white;
+			box-shadow: 5px 5px 24px #ddd;
+			width: 400px;
+			padding: 2rem;
+			border-radius: 15px;
+			display: none;
+			transition: .3s ease-in all;
+			&.show{
+				display: block;
+			}
+			&.content-1{
+				top:10%;
+				left:58%;
+			}
+			&.content-2{
+				top:22%;
+				left:50%;
+			}
+			&.content-3{
+				top:33%;
+				left:1%;
+			}
+			&.content-4{
+				top:50%;
+				left:54%;
+			}
+			&.content-5{
+				top:70%;
+				left:2%;
+			}
+			h3{
+				text-transform: uppercase;
+				font-size: 1.1rem;
+				color: #444;
+				padding-bottom: .6rem;
+			}
+			p{
+				font-size: .85rem;
+				font-weight: 100;
+				color: #444;
+				padding-bottom: 1rem;
+				line-height: 1.4;
+			}
+			.btn {
+				display: inline-block;
+				color:white;
+				text-decoration: none;
+				padding:.8rem 1.6rem;
+				background: #444;
+				box-shadow: 4px 4px 0 $primary-clr;
+			}
+		}
+	}
+
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.75);
+		opacity: 0.75;
+	}
+	100% {
+		transform:scale(2);
+		opacity: 0;
+	}
+}

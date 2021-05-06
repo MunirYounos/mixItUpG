@@ -1,0 +1,4 @@
+#node modules and other files should not go ...
+/node_modules
+/.DS_Store
+/dist

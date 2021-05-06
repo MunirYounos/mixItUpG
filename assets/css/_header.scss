@@ -1,0 +1,41 @@
+.header {
+	height: 150px;
+	width: 100%;
+	&__wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+	&__logo{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color:#444;
+		font-size: 2rem;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-style: italic;
+		p{
+			padding-right: 1rem;
+
+		}
+	}
+	&__ul{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		&-li{
+			padding:0 1.2rem;
+			&-links {
+				text-decoration: none;
+				color: #868686;
+				font-style: 1rem;
+				font-weight: 100;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+}
