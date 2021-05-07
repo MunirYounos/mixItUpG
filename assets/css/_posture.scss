@@ -6,9 +6,9 @@
 		width: 100%;
 		display: block;
 		text-align: center;
-		z-index: 0;
+		z-index: 1;
 		&-img{
-			max-width: 500px;
+			max-width: 400px;
 			width: 100%;
 		
 		}
@@ -68,39 +68,95 @@
 	}
 	&__content{
 		position: relative;
+		z-index: 14;
+		h2{
+			padding: 3rem 0 2rem 0;
+		}
+		&-infoText{
+			position: absolute;
+			top:8rem;
+			left:1rem;
+			max-width: 200px;
+			line-height: 1.6;
+			color:$secondary-clr;
+			.tags{
+				position: relative;
+				cursor: pointer;
+				display: grid;
+				place-items: center;
+				width: 52px;
+				height: 52px;
+				font-size: .75rem;
+				border-radius: 50%;
+				background-color: lighten($primary-clr, 30%);
+				&:hover{
+					background-color: lighten($primary-clr, 10%);
+					&::after{
+						background: $primary-clr;
+						background: rgba($primary-clr,0.8);
+						border-radius: 5px;
+						bottom: -34px;
+						color: #fff;
+						content: attr(title);
+						left: 48%;
+						padding: 5px 15px;
+						position: absolute;
+						z-index: 98;
+						width: 350px;
+					}
+					&::before{
+						border: solid;
+						border-color: $primary-clr transparent;
+						border-width: 0 8px 8px 8px;
+						bottom: -8px;
+						content: "";
+						left: 50%;
+						position: absolute;
+						z-index: 99;
+					}
+				}
+			}
+	
+		}
 		&-item{
 			position: absolute;
 			top:50%;
 			left:50%;
+			transform: translate(-50%, -50%);
+			transform-origin: left;
 			background: white;
-			box-shadow: 5px 5px 24px #ddd;
-			width: 400px;
-			padding: 2rem;
+			box-shadow: 5px 5px 24px #ccc;
+			width: 300px;
+			padding: 3rem 2rem;
+			transform: scale(0);
+			opacity: 0;
+			z-index:1;
 			border-radius: 15px;
-			display: none;
-			transition: .3s ease-in all;
+			transition: .3s ease-in transform, .4s ease-in opacity;
 			&.show{
-				display: block;
+				transform: scale(1);
+				opacity: 1;
+				z-index:1;
 			}
 			&.content-1{
-				top:10%;
+				top:18%;
 				left:58%;
 			}
 			&.content-2{
-				top:22%;
-				left:50%;
+				top:32%;
+				left:55%;
 			}
 			&.content-3{
 				top:33%;
-				left:1%;
+				left:12%;
 			}
 			&.content-4{
 				top:50%;
 				left:54%;
 			}
 			&.content-5{
-				top:70%;
-				left:2%;
+				top:60%;
+				left:12%;
 			}
 			h3{
 				text-transform: uppercase;
@@ -122,6 +178,10 @@
 				padding:.8rem 1.6rem;
 				background: #444;
 				box-shadow: 4px 4px 0 $primary-clr;
+				transition: .3s ease-in box-shadow;
+				&:hover{
+					box-shadow: none;
+				}
 			}
 		}
 	}
