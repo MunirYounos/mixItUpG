@@ -29,7 +29,8 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			font-size: 1rem;
-			box-shadow: 8px 8px 0 #eeedec;
+			box-shadow: 8px 8px 0 $dark-gray;
+			;
 			opacity: 0.899;
 			transition: .3s ease-in box-shadow, .4s ease-in opacity;
 			&:focus,

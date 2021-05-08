@@ -1,0 +1,117 @@
+.featured {
+	padding:1rem 0 4rem 0;
+	background-color: #e5e5e5;
+
+	&__wrapper{
+		position: relative;
+		cursor: pointer;
+		display: block;
+		text-decoration: none;
+		background-color: white;
+		margin: .2rem;
+		padding:1rem;
+		transition: box-shadow .3s ease-in, transform .3s ease-in;
+		&.dis{
+			&::after{
+				content: '';
+				position: absolute;
+				color: white;
+				top:1rem;
+				left:1rem;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 5rem 3rem  0 0;
+				border-color: $accent transparent transparent transparent
+			}
+			&::before{
+				content: "%";
+				position: absolute;
+				top:1rem;
+				left:1rem;
+				color:white;
+				font-size: 1.4rem;
+				z-index: 5;
+				display: grid;
+				place-items: center;
+				width: 2rem;
+				height: 2.5rem;
+			}
+		}
+		&:hover{
+			box-shadow: 8px 8px 0 $primary-clr;
+			transform: translate(-8px, -8px);
+		}
+	}
+	&__content {
+		padding: .5rem 0;
+		.title{
+			color:$dark-gray;
+			text-transform: uppercase;
+			font-weight: 100;
+			font-size: 1rem;
+			sup{
+				font-size: .5rem;
+			}
+		}
+		.variant{
+			color: $secondary-clr;
+			padding: .5rem 0;
+		}
+		.price{
+			color: $accent;
+			font-size: 1.2rem;
+			&.prev{
+				color: $dark-gray;
+				text-decoration: solid red line-through;
+			}
+			&:nth-of-type(2){
+				padding-left:2rem;
+			}
+		}
+		.arrow{
+			color: $secondary-clr;
+			text-align: right;
+		}
+	}
+}
+
+.mission {
+	padding: 3rem 0 5rem 0;
+	&__wrapper{
+		text-align: center;
+		max-width: 60%;
+		margin:0 auto;
+		.title{
+			text-transform: uppercase;
+			font-size: 2.2rem;
+			color: $dark-gray;
+			padding-bottom: 1rem;
+
+		}
+		p{
+			line-height: 1.8;
+			font-size: 1.1rem;
+			color: darken($secondary-clr, 20%);
+			padding-bottom: 1.6rem;
+		}
+		.btn {
+			cursor: pointer;
+			display: inline-block;
+			padding:1.5rem 3rem;
+			background: $dark-gray;
+			color: white;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 1rem;
+			box-shadow: 8px 8px 0 $primary-clr;
+			opacity: 0.899;
+			transition: .3s ease-in box-shadow, .4s ease-in opacity;
+			&:focus,
+			&:hover{
+				box-shadow:none;
+				opacity: 1;
+			}
+		}
+	}
+}

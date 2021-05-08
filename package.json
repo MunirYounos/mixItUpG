@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "sass": "^1.32.12"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }

@@ -1,0 +1,51 @@
+
+.uspcards{
+	&__wrapper{
+		margin: 2rem 0 5rem 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		&-card{
+			cursor: pointer;
+			padding: 2rem 1.5rem;
+			border: .1rem solid rgba($secondary-clr, 0.121);
+			background-color: white;
+			text-decoration: none;
+			transition: box-shadow .3s ease-in, .3s ease-in-out transform;
+			&:hover{
+				box-shadow: 8px 8px 0 $primary-clr;
+				transform: translate(-8px, -8px);
+				.icon, .arrow{
+					color: $primary-clr;
+				}
+			}
+			.icon {
+				display: block;
+				font-size: 2.5rem;
+				padding-bottom: 1.4rem;
+				color: lighten($secondary-clr, 20%);
+				transition: color .4s ease;
+			}
+			h3{
+				font-size: .9rem;
+				text-transform: uppercase;
+				color: darken($secondary-clr, 30%);
+				padding: 1rem 0 2rem 0;
+			}
+			p{
+				font-size: .75rem;
+				line-height: 1.5;
+				letter-spacing: .1rem;
+				color: darken($secondary-clr, 30%);
+				font-weight: 100;
+			}
+			.arrow{
+				display: block;
+				text-align: right;
+				font-size: 1rem;
+				color: $secondary-clr;
+				padding-top: 2rem;
+				transition: color .4s ease;
+			}
+		}
+	}
+}

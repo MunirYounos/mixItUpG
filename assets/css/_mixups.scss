@@ -1,4 +1,5 @@
-.item-wrapper{
+.mixitup{
+	padding:.1rem 0;
 	background-color: #e5e5e5;
 }
 .container{
@@ -14,20 +15,20 @@
 		color:#444;
 
 	}
+
 	.mix {
 		padding: 0;
 		&-menu {
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
+			border-bottom: 3px solid rgba($secondary-clr, 0.5);
 		}
 		&-li {
 			position: relative;
 			padding: .5rem 2rem .5rem 0;
-			font-size: 1rem;
+			font-size: .999rem;
 			text-transform: uppercase;
-			letter-spacing:3px;
-	
 			cursor: pointer;
 			&:focus,
 			&:hover{
@@ -46,20 +47,23 @@
 			}
 			&.active{
 				position: relative;
+				color:darken($primary-clr, 25%);
+				opacity: 1;
 				&::after{
 					content: '';
 					position: absolute;
-					bottom: -2px;
+					bottom: -3px;
 					left: 0;
-					width: 100%;
+					width: calc(100% - 2rem );
 					transform: scale(1);
 					transform-origin: left;
-					height: 2px;
-					background-color: $primary-clr;
+					height: 3px;
+					background-color: darken($primary-clr, 10%);
 				}
 			}
 		}
 		&-item {
+			cursor: pointer;
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 5px;
@@ -73,11 +77,18 @@
 				transition: transform 0.3s ease, height 0.3s ease;
 				background-color: white;
 				padding:1rem 1rem 2rem 1rem;
-
+				cursor: pointer;
 				&.activated{
 					overflow: hidden;
 					transform: translateX(0) scale(1);
+					width: 100%;
 					height: auto;
+					transition: box-shadow .3s ease, transform .3s ease;
+					&:hover{
+						box-shadow: 8px 8px $primary-clr;
+						transform: translate(-8px, -8px);
+						width: 100%;
+					}
 				}
 				&.deleted{
 					transform: translateX(-100px) scale(0);
@@ -94,7 +105,7 @@
 					padding: 0.2rem 0;
 					color: #868686;
 					b{
-						color:$primary-clr;
+						color:orange;
 						font-size: 1.4rem;
 					}
 				}

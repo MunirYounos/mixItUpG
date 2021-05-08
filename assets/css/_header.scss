@@ -11,7 +11,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color:#444;
+		color:$dark-gray;
 		font-size: 2rem;
 		font-weight: 900;
 		text-transform: uppercase;
@@ -29,11 +29,51 @@
 		&-li{
 			padding:0 1.2rem;
 			&-links {
+				display: inline-block;
 				text-decoration: none;
-				color: #868686;
-				font-style: 1rem;
+				color: darken($secondary-clr,20%);
+				font-size: .75rem;
 				font-weight: 100;
 				text-transform: uppercase;
+				position: relative;
+				transition: .3s ease color;
+				&::after{
+					content: "";
+					position: absolute;
+					bottom: -72px;
+					left: 0;
+					height: 4px;
+					width: 0;
+					background-color: white;
+					transition: .3s ease width;
+				}
+				&.postureshirt::before,&.basket::before{
+					content: "%";
+					color: white;
+					background: orange; 
+					position: absolute;
+					top: -1.4rem;
+					right:-1rem;
+					width: 25px;
+					height: 25px;
+					display: grid;
+					place-items: center;
+					font-size: .88rem;
+					border-radius: 50%;
+				}
+				&.user,&.basket{
+					font-size: 1.5rem;
+					margin-top: -0.8rem;
+				}
+				&.basket::before{
+					top:-0.8rem;
+				}
+				&:hover{
+					color: $primary-clr;
+				}
+				&:hover::after{
+					width: 100%;
+				}
 			}
 		}
 	}

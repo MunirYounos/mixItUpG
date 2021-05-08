@@ -72,3 +72,20 @@ const  removeActivePulseItemClass = () => {
 		pulseItem.classList.remove('show')
 	})
 }
+
+let productSlider = document.querySelector('.glider');
+
+const featureProducts = (params) => {
+
+	new Glider(params, {
+		slidesToShow: 4,
+		draggable: true, 
+		dots: '#dots', 
+		arrows: {
+			prev: '.glider-prev',
+			next: '.glider-next'
+		}
+	})
+}
+
+featureProducts(productSlider);
