@@ -11,6 +11,14 @@
 		@media(max-width:768px){
 			width: 100%;
 		}
+		.sale {
+			display: inline-block;
+			color: $accent;
+			text-transform: uppercase;
+			font-size: 1.2rem;
+			font-weight: 100;
+			padding-bottom: .5rem;
+		}
 		&-title {
 			font-size: 3rem;
 			color: whitesmoke;
