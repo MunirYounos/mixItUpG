@@ -69,6 +69,7 @@
 	&__content{
 		position: relative;
 		z-index: 14;
+		overflow: hidden;
 		h2{
 			padding: 3rem 0 2rem 0;
 		}

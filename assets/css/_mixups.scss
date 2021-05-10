@@ -13,6 +13,9 @@
 		font-weight: 900;
 		margin: 4rem 0 2rem 0;
 		color:#444;
+		@media(max-width:768px){
+			font-size: 1.6rem;
+		}
 
 	}
 
@@ -22,6 +25,7 @@
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
+			flex-wrap: wrap;
 			border-bottom: 3px solid rgba($secondary-clr, 0.5);
 		}
 		&-li {

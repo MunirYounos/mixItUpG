@@ -14,6 +14,9 @@
 			background-color: white;
 			text-decoration: none;
 			transition: box-shadow .3s ease-in, .3s ease-in-out transform;
+			@media(max-width:768px){
+				padding: .5rem 1.5rem;
+			}
 			&:hover{
 				box-shadow: 8px 8px 0 $primary-clr;
 				transform: translate(-8px, -8px);
@@ -27,12 +30,19 @@
 				padding-bottom: 1.4rem;
 				color: lighten($secondary-clr, 20%);
 				transition: color .4s ease;
+				@media(max-width:768px){
+					font-size: 1.5rem;
+				}
 			}
 			h3{
 				font-size: .9rem;
 				text-transform: uppercase;
 				color: darken($secondary-clr, 30%);
 				padding: 1rem 0 2rem 0;
+				@media(max-width:768px){
+					padding: 0;
+					font-size: .78rem;
+				}
 			}
 			p{
 				font-size: .75rem;
@@ -40,14 +50,20 @@
 				letter-spacing: .1rem;
 				color: darken($secondary-clr, 30%);
 				font-weight: 100;
+				@media(max-width:768px){
+					display: none;
+				}
 			}
 			.arrow{
 				display: block;
 				text-align: right;
 				font-size: 1rem;
 				color: $secondary-clr;
-				padding-top: 2rem;
+				padding-top: 1.5rem;
 				transition: color .4s ease;
+				@media(max-width:768px){
+					padding-top: .8rem;
+				}
 			}
 		}
 	}

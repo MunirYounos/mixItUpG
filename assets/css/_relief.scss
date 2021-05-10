@@ -12,6 +12,10 @@
 				text-transform: uppercase;
 				font-weight: 900;
 				color: #444;
+				@media(max-width: 768px){
+					font-size: .66rem;
+					padding: .8rem .5rem;
+				}
 				&.active{
 					color: white;
 					background: $primary-clr;
@@ -42,11 +46,16 @@
 			justify-content: flex-start;
 			align-items: center;
 			background: #f7f7f7;
-				display:block;
+			@media(max-width: 768px){
+				flex-direction: column;
+			}
 			}
 		}
 		&-text{
 			padding: 2rem 4rem;
+			@media(max-width: 768px){
+				padding: 2rem 1rem;
+			}
 			h3{
 				font-size: 1.2rem;
 				padding: 1rem 0;

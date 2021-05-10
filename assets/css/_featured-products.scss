@@ -90,6 +90,9 @@
 			font-size: 2.2rem;
 			color: $dark-gray;
 			padding-bottom: 1rem;
+			@media(max-width:768px){
+				font-size: 1.6rem;
+			}
 
 		}
 		p{
