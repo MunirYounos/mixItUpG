@@ -127,41 +127,59 @@ featureProducts(blockQuoteSlider, 1, trustpilotDotsId, trustpilotPrev , trustpil
 
 
 
+// // youtube custome player with image cover
+// var tag = document.createElement('script');
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName('script')[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// //Make ready for morethan one video
+// var playerInfoList = [
+// {id:'player',height:'675',width:'1200',videoId:'A2rIGlsISZE', playerVars: { 'rel':0, 'controls': 0, 'showinfo': 0, 'theme': 'light', 'autohide': 1 }},
+// {id:'playerFR',height:'675',width:'1200',videoId:'6awrdupRbEE', playerVars: { 'rel':0, 'controls': 0, 'showinfo': 0, 'theme': 'light', 'autohide': 1 }}, 
+// {id:'playerUK',height:'675',width:'1200',videoId:'yAV5_mcwQ4I', playerVars: { 'rel':0, 'controls': 0, 'showinfo': 0, 'theme': 'light', 'autohide': 1 }}
+// ];
+// function onYouTubeIframeAPIReady() {
+// if(typeof playerInfoList === 'undefined')
+// return; 
+
+// for(var i = 0; i < playerInfoList.length;i++) {
+// var curplayer = createPlayer(playerInfoList[i]);
+// }   
+// }
+// function createPlayer(playerInfo) {
+// return new YT.Player(playerInfo.id, {
+// height: playerInfo.height,
+// width: playerInfo.width,
+// videoId: playerInfo.videoId,
+// playerVars:playerInfo.playerVars,
+// events: {
+// 'onReady': onPlayerReady, // on ready event below callback function "onPlayerReady" will be called.
+// }
+
+// });
+
+// }
+
 // youtube custome player with image cover
 var tag = document.createElement('script');
+
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-//Make ready for morethan one video
-var playerInfoList = [
-{id:'player',height:'675',width:'1200',videoId:'A2rIGlsISZE', playerVars: { 'rel':0, 'controls': 0, 'showinfo': 0, 'theme': 'light', 'autohide': 1 }},
-{id:'playerFR',height:'675',width:'1200',videoId:'6awrdupRbEE', playerVars: { 'rel':0, 'controls': 0, 'showinfo': 0, 'theme': 'light', 'autohide': 1 }}, 
-{id:'playerUK',height:'675',width:'1200',videoId:'yAV5_mcwQ4I', playerVars: { 'rel':0, 'controls': 0, 'showinfo': 0, 'theme': 'light', 'autohide': 1 }}
-];
+var player;
 function onYouTubeIframeAPIReady() {
-if(typeof playerInfoList === 'undefined')
-return; 
-
-for(var i = 0; i < playerInfoList.length;i++) {
-var curplayer = createPlayer(playerInfoList[i]);
-}   
-}
-function createPlayer(playerInfo) {
-return new YT.Player(playerInfo.id, {
-height: playerInfo.height,
-width: playerInfo.width,
-videoId: playerInfo.videoId,
-playerVars:playerInfo.playerVars,
+player = new YT.Player('player', { // "player" id of youtube player container where video comes using youtube iframe api.
+height: '675',
+width: '1200',
+videoId:'A2rIGlsISZE',
+playerVars: { 'controls': 0, 'showinfo': 0, 'theme': 'light', 'rel': 0 },
 events: {
 'onReady': onPlayerReady, // on ready event below callback function "onPlayerReady" will be called.
 }
-
 });
-
 }
-
-
 let playVid = document.getElementById('play_vid');
 let vidId = document.getElementById('player');
 let pulseVidBtn = document.getElementById('span-btn');

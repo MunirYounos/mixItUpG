@@ -1,21 +1,64 @@
 .footer{
-	background-color: #222;
-	min-height: 300px;
+	background-color: rgb(12, 24, 20);
 	position: relative;
 	.dots{
+		padding-top: 2rem;
 		.dots-png{
-			opacity: 0.2;
+			opacity: 0.9;
+		}
+	}
+	&__links{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		padding:1rem 0;
+		&-section {
+			h3{
+				padding-bottom: 1rem;
+				color: $primary-clr;
+				font-size: 1.2rem;
+				font-weight: 100;
+				text-transform: uppercase;
+			}
+		}
+		&-ul{
+			list-style: none;
+
+			&-li{
+				&-a{
+					display: block;
+					color: darken($secondary-clr, 10%);
+					text-decoration: none;
+					font-weight: 100;
+					font-size: .95rem;
+					padding:.5rem;
+					transition: .3s ease-in color;
+					&:hover{
+						color:white;
+					}
+				}
+			}
 		}
 	}
 	&__copy{
-		position: absolute;
-		bottom:2rem;
-		left: 0;
+		position: relative;
+		display: block;
 		width: 100%;
 		text-align: center;
 		color:white;
 		font-weight: 100;
 		font-size: 0.75rem;
-		letter-spacing: 5px;
+		letter-spacing: 2px;
+		margin-top: 2rem;
+		padding:2rem 0;
+		&::after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 35%;
+			height: 1px;
+			background-color: rgba(lighten($primary-clr, 30%), 0.1);
+		}
 	}
 }
