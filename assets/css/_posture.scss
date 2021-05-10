@@ -1,6 +1,6 @@
 .posture{
 	background-color: #e5e5e5;
-	margin: 5rem 0;
+	margin: 3rem 0;
 	&__figure{
 		position: relative;
 		width: 100%;
@@ -71,11 +71,11 @@
 		z-index: 14;
 		overflow: hidden;
 		h2{
-			padding: 3rem 0 2rem 0;
+			padding: 1rem 0 2rem 0;
 		}
 		&-infoText{
 			position: absolute;
-			top:8rem;
+			top:10rem;
 			left:1rem;
 			max-width: 200px;
 			line-height: 1.6;
@@ -94,7 +94,6 @@
 					background-color: lighten($primary-clr, 10%);
 					&::after{
 						background: $primary-clr;
-						background: rgba($primary-clr,0.8);
 						border-radius: 5px;
 						bottom: -34px;
 						color: #fff;
