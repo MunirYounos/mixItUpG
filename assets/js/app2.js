@@ -74,18 +74,112 @@ const  removeActivePulseItemClass = () => {
 }
 
 let productSlider = document.querySelector('.glider');
+let dotsId = '#dots';
+let productPrev = '.glider-prev';
+let productNext = '.glider-next';
 
-const featureProducts = (params) => {
+
+let blockQuoteSlider = document.querySelector('.trustpilot');
+let trustpilotDotsId = '#trustpilot-dots';
+let trustpilotPrev = '.trustpilot-prev';
+let trustpilotNext = '.trustpilot-next';
+
+
+
+const featureProducts = (params, slidesNumber,dots, prev, next, media) => {
 
 	new Glider(params, {
-		slidesToShow: 4,
+		slidesToShow: slidesNumber,
 		draggable: true, 
-		dots: '#dots', 
+		dots: dots, 
 		arrows: {
-			prev: '.glider-prev',
-			next: '.glider-next'
-		}
+			prev: prev,
+			next: next
+		},
+		responsive: [
+			{
+				// screens greater than >= 775px
+				breakpoint: 775,
+				settings: {
+					// Set to `auto` and provide item width to adjust to viewport
+					slidesToShow: 'auto',
+					slidesToScroll: 'auto',
+					itemWidth: 150,
+					duration: 0.25
+				}
+			},{
+				// screens greater than >= 1024px
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: media,
+					slidesToScroll: 1,
+					itemWidth: 150,
+					duration: 0.25
+				}
+			}
+		]
 	})
 }
 
-featureProducts(productSlider);
+featureProducts(productSlider, 2, dotsId, productPrev, productNext, 4);
+featureProducts(blockQuoteSlider, 1, trustpilotDotsId, trustpilotPrev , trustpilotNext, 3 );
+
+
+
+
+// youtube custome player with image cover
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+//Make ready for morethan one video
+var playerInfoList = [
+{id:'player',height:'675',width:'1200',videoId:'A2rIGlsISZE', playerVars: { 'rel':0, 'controls': 0, 'showinfo': 0, 'theme': 'light', 'autohide': 1 }},
+{id:'playerFR',height:'675',width:'1200',videoId:'6awrdupRbEE', playerVars: { 'rel':0, 'controls': 0, 'showinfo': 0, 'theme': 'light', 'autohide': 1 }}, 
+{id:'playerUK',height:'675',width:'1200',videoId:'yAV5_mcwQ4I', playerVars: { 'rel':0, 'controls': 0, 'showinfo': 0, 'theme': 'light', 'autohide': 1 }}
+];
+function onYouTubeIframeAPIReady() {
+if(typeof playerInfoList === 'undefined')
+return; 
+
+for(var i = 0; i < playerInfoList.length;i++) {
+var curplayer = createPlayer(playerInfoList[i]);
+}   
+}
+function createPlayer(playerInfo) {
+return new YT.Player(playerInfo.id, {
+height: playerInfo.height,
+width: playerInfo.width,
+videoId: playerInfo.videoId,
+playerVars:playerInfo.playerVars,
+events: {
+'onReady': onPlayerReady, // on ready event below callback function "onPlayerReady" will be called.
+}
+
+});
+
+}
+
+
+let playVid = document.getElementById('play_vid');
+let vidId = document.getElementById('player');
+let pulseVidBtn = document.getElementById('span-btn');
+
+function onPlayerReady(event) { 
+	playVid.addEventListener('click',function(){
+		event.target.playVideo();
+	});
+}
+
+window.addEventListener('load', function(){
+	vidId.style.display = 'none';
+});
+
+
+pulseVidBtn.addEventListener('click', function(e){
+	vidId.style.display = '';
+	playVid.style.display = 'none';
+	pulseVidBtn.style.display = 'none';
+});
+

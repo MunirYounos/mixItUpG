@@ -2,6 +2,11 @@
 	background-color: #222;
 	min-height: 300px;
 	position: relative;
+	.dots{
+		.dots-png{
+			opacity: 0.2;
+		}
+	}
 	&__copy{
 		position: absolute;
 		bottom:2rem;

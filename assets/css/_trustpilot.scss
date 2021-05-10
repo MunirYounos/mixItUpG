@@ -1,0 +1,211 @@
+.trustpilot,
+.trustpilot-contain {
+    margin: 0 auto;
+    position: relative
+}
+
+.trustpilot,
+.trustpilot-track {
+    transform: translateZ(0)
+}
+
+.trustpilot-dot,
+.trustpilot-next,
+.trustpilot-prev {
+    border: 0;
+    padding: 0;
+    user-select: none;
+    outline: 0
+}
+
+.trustpilot-contain {
+    width: 100%
+}
+
+.trustpilot {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none
+}
+
+.trustpilot-track {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 1
+}
+
+.trustpilot.draggable {
+    user-select: none;
+    cursor: grab
+}
+
+.trustpilot.draggable .trustpilot-slide img {
+    user-select: none;
+    pointer-events: none
+}
+
+.trustpilot.drag {
+    cursor: grabbing
+}
+.glider-slide,
+.trustpilot-slide {
+    user-select: none;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    min-width: 150px
+}
+.glider-slide img, 
+.trustpilot-slide img {
+    max-width: 100%
+}
+
+.trustpilot::-webkit-scrollbar {
+    opacity: 0;
+    height: 0
+}
+
+
+.trustpilot-next,
+.trustpilot-prev {
+    position: absolute;
+    background: 0 0;
+    z-index: 2;
+    font-size: 1.6rem;
+    text-decoration: none;
+    left: -23px;
+    top: 50%;
+    cursor: pointer;
+    color: $dark-gray;
+    opacity: 1;
+    line-height: 1;
+    transition: opacity .5s cubic-bezier(.17, .67, .83, .67), color .5s cubic-bezier(.17, .67, .83, .67)
+}
+
+.trustpilot-next:focus,
+.trustpilot-next:hover,
+.trustpilot-prev:focus,
+.trustpilot-prev:hover {
+    color: $primary-clr;
+}
+
+.trustpilot-next {
+    right: -23px;
+    left: auto
+}
+
+.trustpilot-next.disabled,
+.trustpilot-prev.disabled {
+    opacity: .25;
+    color: #666;
+    cursor: default
+}
+
+.trustpilot-hide {
+    opacity: 0
+}
+
+.trustpilot-dots {
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem auto 0;
+    padding: 0
+}
+
+.trustpilot-dot {
+    display: block;
+    cursor: pointer;
+    color: #ccc;
+    border-radius: 5px;
+    background: #ccc;
+		border: 1px solid $secondary-clr;
+    width: 36px;
+    height: 6px;
+    margin: 7px
+}
+
+.trustpilot-dot:focus,
+.trustpilot-dot:hover {
+    background: $primary-clr;
+	
+}
+
+.trustpilot-dot.active {
+    background: $primary-clr;
+		border-color: darken($primary-clr, 30%);
+}
+
+@media(max-width:36em) {
+    .trustpilot::-webkit-scrollbar {
+        opacity: 1;
+        -webkit-appearance: none;
+        width: 7px;
+        height: 3px
+    }
+    .trustpilot::-webkit-scrollbar-thumb {
+        opacity: 1;
+        border-radius: 99px;
+        background-color: rgba(156, 156, 156, .25);
+        -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .25);
+        box-shadow: 0 0 1px rgba(255, 255, 255, .25)
+    }
+}
+
+//custom styles
+
+.trustpilot-main{
+    padding: 2rem 0 0 0;
+    .trustpilot{
+        &__single{
+            border: 1px solid rgba($secondary-clr, 0.1);
+            padding: 1rem;
+            text-decoration: none;
+            color: $dark-gray;
+            transition: .3s ease-in box-shadow, .3s ease-in transform;
+            &:hover{
+                box-shadow: 8px 8px 0 $primary-clr;
+                transform: translate(-8px, -8px);
+            }
+            blockquote{
+                padding: 1rem;
+                figure{
+                    h4{
+                        text-transform: uppercase;
+                        padding: .6rem 0;
+                    }
+                    p{
+                        line-height: 1.5;
+                        font-weight: 100;
+                        padding-bottom: 1rem;
+                    }
+                    .tpImage{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        figcaption{
+                            font-style: italic;
+                            color:$primary-clr;
+                        }
+                    }
+                }
+            }
+            .quote {
+                color: rgba($secondary-clr, 0.5);
+                font-size: 2rem;
+            }
+        }
+    }
+    .tpImageLogo{
+        cursor: pointer;
+        text-align: center;
+        opacity: 0.3;
+        img{
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+        }
+    }
+}
