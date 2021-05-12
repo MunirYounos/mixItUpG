@@ -1,7 +1,7 @@
 
 .uspcards{
 	&__wrapper{
-		margin: 2rem 0 5rem 0;
+		margin: -2rem 0 5rem 0;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		@media(max-width:768px){
@@ -9,7 +9,7 @@
 		}
 		&-card{
 			cursor: pointer;
-			padding: 2rem 1.5rem;
+			padding: 1rem 1.5rem;
 			border: .1rem solid rgba($secondary-clr, 0.121);
 			background-color: white;
 			text-decoration: none;
@@ -18,8 +18,7 @@
 				padding: .5rem 1.5rem;
 			}
 			&:hover{
-				box-shadow: 8px 8px 0 $primary-clr;
-				transform: translate(-8px, -8px);
+				@include hovered(-8px);
 				.icon, .arrow{
 					color: $primary-clr;
 				}
@@ -27,7 +26,7 @@
 			.icon {
 				display: block;
 				font-size: 2.5rem;
-				padding-bottom: 1.4rem;
+				padding-bottom: .5rem;
 				color: lighten($secondary-clr, 20%);
 				transition: color .4s ease;
 				@media(max-width:768px){
@@ -38,7 +37,7 @@
 				font-size: .9rem;
 				text-transform: uppercase;
 				color: darken($secondary-clr, 30%);
-				padding: 1rem 0 2rem 0;
+				padding: 1rem 0;
 				@media(max-width:768px){
 					padding: 0;
 					font-size: .78rem;

@@ -1,0 +1,49 @@
+
+.count{
+	background-color: $accent;
+	.new-counter{
+		padding: .2rem 0;
+		display: flex;
+		justify-content: center;
+	align-items: center;
+	color: white;
+	@include size(ph){
+		flex-direction: column;
+	}
+	h4{
+		text-transform: uppercase;
+		font-size: .75rem;
+		font-weight: 100;
+	}
+	&-btn{
+		color:white;
+		font-size: .65rem;
+		padding:.4rem;
+		text-transform: uppercase;
+		text-decoration: 1px underline white;
+		transition: .3s ease-in background-color;
+		&:hover, &:focus{
+			background-color: rgba(0,0,0,0.2);
+		}
+		@include size(ph){
+			padding: 0 0 .5rem 0;
+		}
+	}
+	.counter__wrapper{
+		display: flex;
+		justify-content: flex-end;
+		align-items:center;
+
+		li{
+			text-transform: uppercase;
+			padding: .5rem;
+			font-size: .75rem;
+			span{
+				padding: 0 .2rem;
+				display: inline-block;
+				font-weight: 900;
+			}
+		}
+	}
+	}
+}

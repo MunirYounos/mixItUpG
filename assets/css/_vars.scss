@@ -4,6 +4,29 @@ $secondary-clr: #868686;
 $dark-gray: #444;
 $accent: #f48400;
 
+@mixin size($size) {
+  @if $size == ph{
+    @media (max-width: 768px) { @content; }
+  } @else if $size == tbt {
+    @media (min-width: 769px) { @content; }
+  } @else if $size == dx {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == dx-lg {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+@mixin hovered($Y) {
+	box-shadow: 0 1px 6px rgba($secondary-clr, 0.4);
+	transform: translateY($Y);
+}
+//example mixin
+// .header-title {  
+// 	font-size: 2rem;  
+// 	@include size(ph) {    
+// 		 font-size: 1rem; 
+// 	}
+// }
+
 
 //globals
 *{
@@ -17,6 +40,13 @@ body{
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 14px;
 	overflow-x:hidden;
+}
+.container{
+	display: block;
+	max-width: 1196px;
+	padding:0 12px;
+	margin: 0 auto;
+	height: 100%;
 }
 ul{
 	list-style: none;

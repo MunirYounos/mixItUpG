@@ -39,8 +39,7 @@
 			}
 		}
 		&:hover{
-			box-shadow: 8px 8px 0 $primary-clr;
-			transform: translate(-8px, -8px);
+			@include hovered(-2px);
 		}
 	}
 	&__content {

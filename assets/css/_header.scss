@@ -1,5 +1,5 @@
 .header {
-	height: 150px;
+	height: 120px;
 	width: 100%;
 	&__wrapper{
 		display: flex;
@@ -89,11 +89,11 @@
 				&::after{
 					content: "";
 					position: absolute;
-					bottom: -72px;
+					bottom: -55px;
 					left: 0;
-					height: 4px;
+					height: 2px;
 					width: 0;
-					background-color: white;
+					background-color: $primary-clr;
 					transition: .3s ease width;
 				}
 				&.postureshirt::before,&.basket::before{

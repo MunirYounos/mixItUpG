@@ -2,21 +2,21 @@ const sortButtons = document.querySelectorAll('.mix-li');
 const sortItems = document.querySelectorAll('.item');
 
 sortButtons.forEach(btn => {
-	btn.addEventListener('click', ()=> {
+	btn.addEventListener('click', () => {
 		removeActiveClass()
-			btn.classList.add('active');
-			let targetData = btn.getAttribute('data-target');
-			sortItems.forEach(item => {
-				item.classList.remove('activated');
-				item.classList.add('deleted');
-				if(item.getAttribute('data-item') == targetData || targetData == 'all'){
-					item.classList.remove('deleted');
-					item.classList.add('activated');
-				}
-			})
+		btn.classList.add('active');
+		let targetData = btn.getAttribute('data-target');
+		sortItems.forEach(item => {
+			item.classList.remove('activated');
+			item.classList.add('deleted');
+			if (item.getAttribute('data-item') == targetData || targetData == 'all') {
+				item.classList.remove('deleted');
+				item.classList.add('activated');
+			}
+		})
 	})
 })
-const  removeActiveClass = () => {
+const removeActiveClass = () => {
 	sortButtons.forEach(btn => {
 		btn.classList.remove('active')
 	})
@@ -24,9 +24,9 @@ const  removeActiveClass = () => {
 
 // relief tabs
 const tabBtns = document.querySelectorAll('.relief__wrapper-btns-btn');
-const tabItems= document.querySelectorAll('.relief__wrapper-content-img');
+const tabItems = document.querySelectorAll('.relief__wrapper-content-img');
 
-function selectTabContents (e) {
+function selectTabContents(e) {
 	removeActiveTabClass();
 	removeActiveTabItemClass();
 	this.classList.add('active');
@@ -36,12 +36,12 @@ function selectTabContents (e) {
 
 tabBtns.forEach(tab => tab.addEventListener('click', selectTabContents));
 
-const  removeActiveTabClass = () => {
+const removeActiveTabClass = () => {
 	tabBtns.forEach(tab => {
 		tab.classList.remove('active')
 	})
 }
-const  removeActiveTabItemClass = () => {
+const removeActiveTabItemClass = () => {
 	tabItems.forEach(tabItem => {
 		tabItem.classList.remove('active')
 	})
@@ -49,9 +49,9 @@ const  removeActiveTabItemClass = () => {
 
 // pusle tabs
 const pulseBtns = document.querySelectorAll('.posture__figure-circle');
-const pulseItems= document.querySelectorAll('.posture__content-item');
+const pulseItems = document.querySelectorAll('.posture__content-item');
 
-function selectPulseContents (e) {
+function selectPulseContents(e) {
 	removeActivePulseClass();
 	removeActivePulseItemClass();
 	this.classList.add('show');
@@ -62,12 +62,12 @@ function selectPulseContents (e) {
 
 pulseBtns.forEach(pb => pb.addEventListener('click', selectPulseContents));
 
-const  removeActivePulseClass = () => {
+const removeActivePulseClass = () => {
 	pulseBtns.forEach(pulse => {
 		pulse.classList.remove('show')
 	})
 }
-const  removeActivePulseItemClass = () => {
+const removeActivePulseItemClass = () => {
 	pulseItems.forEach(pulseItem => {
 		pulseItem.classList.remove('show')
 	})
@@ -86,12 +86,12 @@ let trustpilotNext = '.trustpilot-next';
 
 
 
-const featureProducts = (params, slidesNumber,dots, prev, next, media) => {
+const featureProducts = (params, slidesNumber, dots, prev, next, media) => {
 
 	new Glider(params, {
 		slidesToShow: slidesNumber,
-		draggable: true, 
-		dots: dots, 
+		draggable: true,
+		dots: dots,
 		arrows: {
 			prev: prev,
 			next: next
@@ -107,7 +107,7 @@ const featureProducts = (params, slidesNumber,dots, prev, next, media) => {
 					itemWidth: 150,
 					duration: 0.25
 				}
-			},{
+			}, {
 				// screens greater than >= 1024px
 				breakpoint: 1024,
 				settings: {
@@ -122,7 +122,7 @@ const featureProducts = (params, slidesNumber,dots, prev, next, media) => {
 }
 
 featureProducts(productSlider, 2, dotsId, productPrev, productNext, 4);
-featureProducts(blockQuoteSlider, 1, trustpilotDotsId, trustpilotPrev , trustpilotNext, 3 );
+featureProducts(blockQuoteSlider, 1, trustpilotDotsId, trustpilotPrev, trustpilotNext, 3);
 
 
 
@@ -170,34 +170,94 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var player;
 function onYouTubeIframeAPIReady() {
-player = new YT.Player('player', { // "player" id of youtube player container where video comes using youtube iframe api.
-height: '675',
-width: '1200',
-videoId:'A2rIGlsISZE',
-playerVars: { 'controls': 0, 'showinfo': 0, 'theme': 'light', 'rel': 0 },
-events: {
-'onReady': onPlayerReady, // on ready event below callback function "onPlayerReady" will be called.
-}
-});
+	player = new YT.Player('player', { // "player" id of youtube player container where video comes using youtube iframe api.
+		height: '675',
+		width: '1200',
+		videoId: 'A2rIGlsISZE',
+		playerVars: { 'controls': 0, 'showinfo': 0, 'theme': 'light', 'rel': 0 },
+		events: {
+			'onReady': onPlayerReady, // on ready event below callback function "onPlayerReady" will be called.
+		}
+	});
 }
 let playVid = document.getElementById('play_vid');
 let vidId = document.getElementById('player');
 let pulseVidBtn = document.getElementById('span-btn');
 
-function onPlayerReady(event) { 
-	playVid.addEventListener('click',function(){
+function onPlayerReady(event) {
+	playVid.addEventListener('click', function () {
 		event.target.playVideo();
 	});
 }
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
 	vidId.style.display = 'none';
 });
 
 
-pulseVidBtn.addEventListener('click', function(e){
+pulseVidBtn.addEventListener('click', function (e) {
 	vidId.style.display = '';
 	playVid.style.display = 'none';
 	pulseVidBtn.style.display = 'none';
 });
 
+
+const conterNew = document.getElementById('counterNew');
+const settings = {
+	'Title': 'Spring sale - save 25% on all - sale ends in: ',
+	'End_time': 'May 16, 2021 23:59:59',
+	'Days': 'Days',
+	'Hours': 'Hours',
+	'Minutes': 'Minutes',
+	'Seconds': 'Seconds',
+	'Link': 'https://anodyne.dk/'
+};
+//add zero
+function addZero(n) {
+	return (parseInt(n, 10) < 10 ? '0' : '') + n;
+}
+
+let template = document.createElement('div');
+template.classList = 'new-counter wrapper';
+template.innerHTML = `<h4 id="head">${settings['Title']}</h4>
+        <ul class="counter__wrapper">
+        <li><span id="days"></span>${settings['Days']}</li>
+        <li><span id="hours"></span>${settings['Hours']}</li>
+        <li><span id="minutes"></span>${settings['Minutes']}</li>
+        <li><span id="seconds"></span>${settings['Seconds']}</li>
+        </ul>
+				<a class="new-counter-btn" href="${settings['Link']}">See discount here</a>
+				`;
+conterNew.prepend(template);
+
+const second = 1000,
+	minute = second * 60,
+	hour = minute * 60,
+	day = hour * 24;
+
+if (isValidDate(new Date(settings['End_time']))) {
+	let countDown = new Date(settings['End_time']).getTime();
+	const x = setInterval(function () {
+		let now = new Date().getTime(),
+			distance = countDown - now;
+
+		document.querySelector('.new-counter #days').innerText = Math.floor(distance / (day)),
+			document.querySelector('.new-counter #hours').innerText = addZero(Math.floor((distance % (day)) / (hour))),
+			document.querySelector('.new-counter #minutes').innerText = addZero(Math.floor((distance % (hour)) / (minute))),
+			document.querySelector('.new-counter #seconds').innerText = addZero(Math.floor((distance % (minute)) / second));
+
+		// Hide when date is reached
+		if (distance < 0) {
+			clearInterval(x);
+			document.querySelector('.new-counter.wrapper').style.display = 'none';
+			console.log('The countdown has finished');
+		}
+
+	}, second);
+} else {
+	console.error('End date is invalid');
+}
+
+function isValidDate(d) {
+	return d instanceof Date && !isNaN(d);
+}

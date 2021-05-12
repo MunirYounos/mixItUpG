@@ -40,16 +40,13 @@
     user-select: none;
     cursor: grab
 }
-
 .glider.draggable .glider-slide img {
     user-select: none;
     pointer-events: none
 }
-
 .glider.drag {
     cursor: grabbing
 }
-
 .glider-slide {
     user-select: none;
     justify-content: center;
@@ -57,16 +54,13 @@
     width: 100%;
     min-width: 150px
 }
-
 .glider-slide img {
     max-width: 100%
 }
-
 .glider::-webkit-scrollbar {
-    opacity: 0;
-    height: 0
+opacity: 0;
+height: 0
 }
-
 .glider-next,
 .glider-prev {
     position: absolute;
@@ -87,69 +81,63 @@
 .glider-next:hover,
 .glider-prev:focus,
 .glider-prev:hover {
-    color: $primary-clr;
+color: $primary-clr;
 }
 
 .glider-next {
-    right: -23px;
-    left: auto
+right: -23px;
+left: auto
 }
 
 .glider-next.disabled,
 .glider-prev.disabled {
-    opacity: .25;
-    color: #666;
-    cursor: default
+opacity: .25;
+color: #666;
+cursor: default
 }
-
 .glider-hide {
-    opacity: 0
+opacity: 0
 }
-
 .glider-dots {
-    user-select: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 1rem auto 0;
-    padding: 0
+user-select: none;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin: 1rem auto 0;
+padding: 0
 }
 
 .glider-dot {
-    display: block;
-    cursor: pointer;
-    color: #ccc;
-    border-radius: 5px;
-    background: #ccc;
-		border: 1px solid $secondary-clr;
-    width: 36px;
-    height: 6px;
-    margin: 7px
+display: block;
+cursor: pointer;
+color: #ccc;
+border-radius: 20px;
+background: $secondary-clr;
+width: 14px;
+height: 14px;
+margin: 7px
 }
-
 .glider-dot:focus,
 .glider-dot:hover {
-    background: $primary-clr;
-	
+background: $primary-clr;
 }
-
 .glider-dot.active {
-    background: $primary-clr;
-		border-color: darken($primary-clr, 30%);
+background: $primary-clr;
+border-color: darken($primary-clr, 30%);
 }
 
 @media(max-width:36em) {
-    .glider::-webkit-scrollbar {
-        opacity: 1;
-        -webkit-appearance: none;
-        width: 7px;
-        height: 3px
-    }
-    .glider::-webkit-scrollbar-thumb {
-        opacity: 1;
-        border-radius: 99px;
-        background-color: rgba(156, 156, 156, .25);
-        -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .25);
-        box-shadow: 0 0 1px rgba(255, 255, 255, .25)
-    }
+.glider::-webkit-scrollbar {
+opacity: 1;
+-webkit-appearance: none;
+width: 7px;
+height: 3px
+}
+.glider::-webkit-scrollbar-thumb {
+opacity: 1;
+border-radius: 99px;
+background-color: rgba(156, 156, 156, .25);
+-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .25);
+box-shadow: 0 0 1px rgba(255, 255, 255, .25)
+}
 }
