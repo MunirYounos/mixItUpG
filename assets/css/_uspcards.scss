@@ -1,20 +1,24 @@
 
 .uspcards{
 	&__wrapper{
-		margin: -2rem 0 5rem 0;
+		position: relative;
+		margin: -2rem 0 2rem 0;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+		z-index: 3;
 		@media(max-width:768px){
 			grid-template-columns: repeat(2, 1fr);
 		}
 		&-card{
+			text-align: center;
 			cursor: pointer;
 			padding: 1rem 1.5rem;
 			border: .1rem solid rgba($secondary-clr, 0.121);
 			background-color: white;
 			text-decoration: none;
 			transition: box-shadow .3s ease-in, .3s ease-in-out transform;
-			@media(max-width:768px){
+			@include size(phone){
+				text-align: center;
 				padding: .5rem 1.5rem;
 			}
 			&:hover{
@@ -25,12 +29,12 @@
 			}
 			.icon {
 				display: block;
-				font-size: 2.5rem;
+				font-size: 3rem;
 				padding-bottom: .5rem;
 				color: lighten($secondary-clr, 20%);
 				transition: color .4s ease;
-				@media(max-width:768px){
-					font-size: 1.5rem;
+				@include size(phone){
+					font-size: 2rem;
 				}
 			}
 			h3{
@@ -38,7 +42,7 @@
 				text-transform: uppercase;
 				color: darken($secondary-clr, 30%);
 				padding: 1rem 0;
-				@media(max-width:768px){
+				@include size(phone){
 					padding: 0;
 					font-size: .78rem;
 				}
@@ -49,7 +53,7 @@
 				letter-spacing: .1rem;
 				color: darken($secondary-clr, 30%);
 				font-weight: 100;
-				@media(max-width:768px){
+				@include size(phone){
 					display: none;
 				}
 			}
@@ -60,8 +64,9 @@
 				color: $secondary-clr;
 				padding-top: 1.5rem;
 				transition: color .4s ease;
-				@media(max-width:768px){
+				@include size(phone){
 					padding-top: .8rem;
+					text-align: center;
 				}
 			}
 		}

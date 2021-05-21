@@ -7,7 +7,7 @@
 		justify-content: center;
 	align-items: center;
 	color: white;
-	@include size(ph){
+	@include size(phone){
 		flex-direction: column;
 	}
 	h4{
@@ -25,8 +25,8 @@
 		&:hover, &:focus{
 			background-color: rgba(0,0,0,0.2);
 		}
-		@include size(ph){
-			padding: 0 0 .5rem 0;
+		@include size(phone){
+			padding: 0 0 .3rem 0;
 		}
 	}
 	.counter__wrapper{

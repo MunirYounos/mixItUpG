@@ -1,18 +1,39 @@
 .hero{
 	&__wrapper{
+		position: relative;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
-		min-height: 700px;
-		@media(max-width:768px){
+		min-height: 400px;
+		z-index: 1;
+		@include size(phone){
 			background-position: 72%;
+		}
+
+		&:before{
+		content: '';
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.05);
+		z-index: -1;
+		@include size(phone){
+			background-color: rgba(0,0,0,0.3);
+		}
 		}
 	}
 	&__content{
+		position: relative;
+		text-align: left;
 		padding:10rem 0;
 		width: 50%;
-		@media(max-width:768px){
+		z-index: 2;
+		@include size(phone){
+			text-align: center;
 			width: 100%;
+			padding: 4rem 1rem;
 		}
 		.sale {
 			display: inline-block;
@@ -24,32 +45,27 @@
 		}
 		&-title {
 			font-size: 3rem;
-			color: whitesmoke;
+			color: darken($secondary-clr,10%);
 			text-transform: uppercase;
+			@include size(phone){
+				font-size: 2rem;
+				color: lighten($secondary-clr,50%);
+			}
 		}
 		&-text{
-			color: white;
+			color: darken($secondary-clr,10%);
 			line-height: 1.8;
 			letter-spacing: 2px;
 			font-size: 1rem;
+			font-weight: 500;
 			padding: 2rem 0;
+			@include size(phone){
+				font-size: .75rem;
+				color: lighten($secondary-clr,50%);
+			}
 		}
 		&-btn{
-			cursor: pointer;
-			display: inline-block;
-			padding:1.5rem 3rem;
-			background: $primary-clr;
-			color: white;
-			text-decoration: none;
-			text-transform: uppercase;
-			font-size: 1rem;
-			opacity: 1;
-			transition: 300ms ease-in box-shadow, 250ms ease-in transform;
-			&:focus,
-			&:hover{
-				@include hovered(-4px);
-				opacity: 1;
-			}
+			@include btn($primary-clr, $dark-gray);
 		}
 	}
 }

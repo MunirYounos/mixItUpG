@@ -4,27 +4,31 @@
 	&__wrapper{
 		&-btns{
 			padding:0;
+			width: 100%;
+			@include size(phone){
+				background-color: #f7f7f7;
+			}
 			&-btn{
 				cursor:pointer;
 				display: inline-block;
-				padding: 1rem 2rem;
+				padding: 1rem 2.6rem;
 				background: #bbb;
 				text-transform: uppercase;
 				font-weight: 900;
 				color: #444;
-				@media(max-width: 768px){
+				@include size(phone){
 					font-size: .66rem;
-					padding: .8rem .5rem;
+					padding: 1rem  .555rem;
 				}
 				&.active{
 					color: white;
-					background: $primary-clr;
+					background: darken($primary-clr, 1%);
 					&:nth-of-type(2){
-					background: $primary-clr;
+					background: darken($primary-clr, 1%);
 					margin: -4px;
 					}
 					&:nth-of-type(3){
-					background: $primary-clr;
+					background: darken($primary-clr, 1%);
 					margin: -2px;
 				}
 				}
@@ -45,27 +49,34 @@
 			display: flex !important;
 			justify-content: flex-start;
 			align-items: center;
-			background: #f7f7f7;
-			@media(max-width: 768px){
+			padding: .4rem;
+			background:darken($primary-clr, 1%);
+			@include size(phone){
 				flex-direction: column;
+			}
+			&:last-child{
+				padding:0 0 0 .4rem;
+				@include size(phone){
+					padding: .4rem;
+				}
 			}
 			}
 		}
 		&-text{
 			padding: 2rem 4rem;
-			@media(max-width: 768px){
+			@include size(phone){
 				padding: 2rem 1rem;
 			}
 			h3{
 				font-size: 1.2rem;
 				padding: 1rem 0;
 				text-transform: uppercase;
-				color: #444;
+				color: #fff;
 			}
 			p{
 				font-size: 1rem;
 				font-weight: 100;
-				color: #444;
+				color: #f7f7f7;
 				line-height: 1.5;
 			}
 			&-btn {
@@ -77,13 +88,13 @@
 				color: white;
 				text-transform: uppercase;
 				text-decoration: none;
-				box-shadow: 8px 8px 0 $primary-clr;
-				opacity: 0.8;
+				box-shadow: 0px 1px 6px $secondary-clr;
+				opacity: 1;
 				transition: .3s ease-in box-shadow, .3s ease-in opacity;
 				&:focus,
 				&:hover{
 					box-shadow: none;
-					opacity: 1;
+					opacity: 0.8;
 				}
 			}
 		}

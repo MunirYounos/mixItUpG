@@ -73,15 +73,19 @@
     position: absolute;
     background: 0 0;
     z-index: 2;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    font-weight: 100;
     text-decoration: none;
-    left: -23px;
+    left:-0.5rem;
     top: 50%;
+    transform: translateY(-50%);
+    padding:1rem;
     cursor: pointer;
     color: $dark-gray;
     opacity: 1;
+    border-radius: 50%;
     line-height: 1;
-    transition: opacity .5s cubic-bezier(.17, .67, .83, .67), color .5s cubic-bezier(.17, .67, .83, .67)
+    transition: opacity .5s cubic-bezier(.17, .67, .83, .67), color .5s cubic-bezier(.17, .67, .83, .67), .5s cubic-bezier(.17, .67, .83, .67);
 }
 
 .trustpilot-next:focus,
@@ -89,10 +93,11 @@
 .trustpilot-prev:focus,
 .trustpilot-prev:hover {
     color: $primary-clr;
+    background-color: rgba($dark-gray, 0.2);
 }
 
 .trustpilot-next {
-    right: -23px;
+    right: -0.5rem;
     left: auto
 }
 
@@ -158,17 +163,21 @@
 //custom styles
 
 .trustpilot-main{
-    padding: 2rem 0 0 0;
+margin-top: 3rem;
     .trustpilot{
+        padding: 1rem 0;
         &__single{
+            position: relative;
             border: 1px solid rgba($secondary-clr, 0.1);
             padding: 1rem;
             text-decoration: none;
             color: $dark-gray;
             transition: .3s ease-in box-shadow, .3s ease-in transform;
+            z-index: 3;
             &:hover{
-                box-shadow: 8px 8px 0 $primary-clr;
-                transform: translate(-8px, -8px);
+                border: 1px solid rgba($secondary-clr, 0.1);
+                box-shadow: 0 1px 6px rgba($secondary-clr, 0.4);
+                transform: translateY(-8px);
             }
             blockquote{
                 padding: 1rem;
@@ -202,10 +211,5 @@
     .tpImageLogo{
         cursor: pointer;
         text-align: center;
-        opacity: 0.3;
-        img{
-            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-            filter: grayscale(100%);
-        }
     }
 }

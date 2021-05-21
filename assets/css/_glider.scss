@@ -66,15 +66,19 @@ height: 0
     position: absolute;
     background: 0 0;
     z-index: 2;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    font-weight: 100;
     text-decoration: none;
-    left: -23px;
+    left:-0.5rem;
     top: 50%;
+    transform: translateY(-50%);
+    padding:1rem;
     cursor: pointer;
     color: $dark-gray;
     opacity: 1;
+    border-radius: 50%;
     line-height: 1;
-    transition: opacity .5s cubic-bezier(.17, .67, .83, .67), color .5s cubic-bezier(.17, .67, .83, .67)
+    transition: opacity .5s cubic-bezier(.17, .67, .83, .67), color .5s cubic-bezier(.17, .67, .83, .67), .5s cubic-bezier(.17, .67, .83, .67);
 }
 
 .glider-next:focus,
@@ -82,10 +86,11 @@ height: 0
 .glider-prev:focus,
 .glider-prev:hover {
 color: $primary-clr;
+background-color: rgba($dark-gray, 0.2);
 }
 
 .glider-next {
-right: -23px;
+right: -0.5rem;
 left: auto
 }
 

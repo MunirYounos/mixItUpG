@@ -33,7 +33,20 @@
 				border-radius: 50%;
 				z-index: -1;
 				animation: pulse 2000ms ease-in infinite;
+				@include size(phone){
+					top: -17px;
+					left: -15px;
+					width: 80px;
+					height: 80px;
+				}
 			}
+		@include size(phone){
+			font-size: 1.2rem;
+			width: 60px;
+			height: 60px;
+			padding-left: .4rem;
+			border: 6px solid lighten($primary-clr, 10%);
+		}
 		}
 	}
 	.dots{

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/styles.scss">
+	<title>Vanilla fitering</title>
+</head>
+<body>
+	<section class="count">
+		<div class="container">
+			<div id="counterNew"></div>
+		</div>
+	</section>
+	<header class="header">
+		<div class="container">
+			<div class="header__wrapper">
+				<span class="menu-toggle"><span class="line"></span></span>
+				<div class="header__logo">
+					<img src="images/Activeposture_684x150px.png" alt="Activerposture uk" width="180">
+				</div>
+							<ul class="header__ul">
+								<li class="header__ul-li">
+									<a href="#" class="header__ul-li-links">Home</a>
+								</li>
+								<li class="header__ul-li">
+									<a href="#" class="header__ul-li-links">Shop</a>
+								</li>
+								<li class="header__ul-li">
+									<a href="#" class="header__ul-li-links postureshirt">The Posture shirt</a>
+								</li>
+								<li class="header__ul-li">
+									<a href="#" class="header__ul-li-links">Special offers</a>
+								</li>
+								<li class="header__ul-li">
+									<a href="#" class="header__ul-li-links">About us</a>
+								</li>
+								<li class="header__ul-li">
+									<a href="#" class="header__ul-li-links">contact</a>
+								</li>
+							</ul>
+							<ul class="header__ul header__user-cart">
+								<li class="header__ul-li">
+									<a href="#" class="header__ul-li-links user"><i class="fas fa-user"></i></a>
+								</li>
+								<li class="header__ul-li">
+									<a href="#" class="header__ul-li-links basket"><i class="fas fa-shopping-basket"></i></a>
+								</li>
+							</ul>
+			</div>
+		</div>
+	</header>
+	<section id="hero" class="hero">
+		<div class="hero__wrapper"style="background-image: url(images/hero.jpg)">
+				<div class="container">
+					<div class="hero__content">
+						<span class="sale">Spring Sale</span>
+						<h1 class="hero__content-title">
+							The Posture shirt <sup>TM</sup> white
+						</h1>
+						<div class="hero__content-text">
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem sequi, praesentium fugit blanditiis aliquid impedit quibusdam iusto magnam beatae dolore?</p>
+						</div>
+						<a href="#" class="hero__content-btn">
+							Read More 
+							<i class="fas fa-long-arrow-alt-right"></i>
+						</a>
+					</div>
+				</div>
+		</div>
+	</section>
+
+	<section class="uspcards">
+		<div class="container">
+			<div class="uspcards__wrapper">
+				<!-- card starts -->
+				<a href="#" class="uspcards__wrapper-card">
+					<span class="icon"><i class="fas fa-shipping-fast"></i></span>
+					<h3>Free return and exchange</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.</p>
+					<span class="arrow"><i class="fas fa-long-arrow-alt-right"></i></span>
+				</a>
+				<!-- card ends -->
+				<a href="#" class="uspcards__wrapper-card">
+					<span class="icon"><i class="fas fa-undo-alt"></i></span>
+					<h3>60 days return policy</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.</p>
+					<span class="arrow"><i class="fas fa-long-arrow-alt-right"></i></span>
+				</a>
+
+				<!-- card starts -->
+				<a href="#" class="uspcards__wrapper-card">
+					<span class="icon"><i class="fas fa-headphones-alt"></i></span>
+					<h3>Excellent customer service</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.</p>
+					<span class="arrow"><i class="fas fa-long-arrow-alt-right"></i></span>
+				</a>
+				<!-- card ends -->
+
+						<!-- card starts -->
+				<a href="#" class="uspcards__wrapper-card">
+					<span class="icon"><i class="fas fa-smile"></i></span>
+					<h3>Money-Back gaurantee</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.</p>
+					<span class="arrow"><i class="fas fa-long-arrow-alt-right"></i></span>
+				</a>
+				<!-- card ends -->
+			</div>
+		</div>
+	</section>
+	<section class="featured" id="featured">
+		<div class="container">
+			<div class="glider-contain multiple">
+				<h2>Featured products</h2>
+				<button class="glider-prev">
+					<i class="fas fa-long-arrow-alt-left"></i>
+				</button>
+				<div class="glider">
+					<a href="#" class="featured__wrapper">
+						<figure>
+							<img src="images/sl1.jpg" alt="featured products">
+							<div class="featured__content">
+								<h3 class="title">Posture Shirt <sup>TM</sup></h3>
+								<p class="variant">Black</p>
+								<span class="price">$ 79.4</span>
+								<p class="arrow"><i class="fas fa-long-arrow-alt-right"></i></p>
+							</div>
+						</figure>
+					</a>
+					<a href="#" class="featured__wrapper">
+						<figure>
+							<img src="images/sl2.jpg" alt="featured products">
+							<div class="featured__content">
+								<h3 class="title">Posture Shirt <sup>TM</sup></h3>
+								<p class="variant">Black</p>
+								<span class="price">$ 79.4</span>
+								<p class="arrow"><i class="fas fa-long-arrow-alt-right"></i></p>
+							</div>
+						</figure>
+					</a>
+
+					<a href="#" class="featured__wrapper dis">
+						<figure>
+							<img src="images/sl4.jpg" alt="featured products">
+							<div class="featured__content">
+								<h3 class="title">Posture Shirt <sup>TM</sup></h3>
+								<p class="variant">Black</p>
+								<span class="price prev">$ 99.4</span>
+								<span class="price">$ 79.4</span>
+								<p class="arrow"><i class="fas fa-long-arrow-alt-right"></i></p>
+							</div>
+						</figure>
+					</a>
+
+					<a href="#" class="featured__wrapper dis">
+						<figure>
+							<img src="images/sl5.jpg" alt="featured products">
+							<div class="featured__content">
+								<h3 class="title">Posture Shirt <sup>TM</sup></h3>
+								<p class="variant">Black</p>
+								<span class="price prev">$ 99.4</span>
+								<span class="price">$ 79.4</span>
+								<p class="arrow"><i class="fas fa-long-arrow-alt-right"></i></p>
+							</div>
+						</figure>
+					</a>
+					<a href="#" class="featured__wrapper">
+						<figure>
+							<img src="images/sl2.jpg" alt="featured products">
+							<div class="featured__content">
+								<h3 class="title">Posture Shirt <sup>TM</sup></h3>
+								<p class="variant">Black</p>
+								<span class="price">$ 79.4</span>
+								<p class="arrow"><i class="fas fa-long-arrow-alt-right"></i></p>
+							</div>
+						</figure>
+					</a>
+
+					<a href="#" class="featured__wrapper dis">
+						<figure>
+							<img src="images/sl4.jpg" alt="featured products">
+							<div class="featured__content">
+								<h3 class="title">Posture Shirt <sup>TM</sup></h3>
+								<p class="variant">Black</p>
+								<span class="price prev">$ 99.4</span>
+								<span class="price">$ 79.4</span>
+								<p class="arrow"><i class="fas fa-long-arrow-alt-right"></i></p>
+							</div>
+						</figure>
+					</a>
+
+					<a href="#" class="featured__wrapper dis">
+						<figure>
+							<img src="images/sl5.jpg" alt="featured products">
+							<div class="featured__content">
+								<h3 class="title">Posture Shirt <sup>TM</sup></h3>
+								<p class="variant">Black</p>
+								<span class="price prev">$ 99.4</span>
+								<span class="price">$ 79.4</span>
+								<p class="arrow"><i class="fas fa-long-arrow-alt-right"></i></p>
+							</div>
+						</figure>
+					</a>
+					<a href="#" class="featured__wrapper">
+						<figure>
+							<img src="images/sl6.jpg" alt="featured products">
+							<div class="featured__content">
+							<h3 class="title">Men's Spinalq pro</h3>
+								<p class="variant">Black</p>
+								<span class="price">$ 78.99</span>
+								<p class="arrow"><i class="fas fa-long-arrow-alt-right"></i></p>
+							</div>
+						</figure>
+					</a>
+
+					<a href="#" class="featured__wrapper">
+						<figure>
+							<img src="images/sl2.jpg" alt="featured products">
+							<div class="featured__content">
+							<h3 class="title">Men's Spinalq pro</h3>
+								<p class="variant">Black</p>
+								<span class="price">$ 78.99</span>
+								<p class="arrow"><i class="fas fa-long-arrow-alt-right"></i></p>
+							</div>
+						</figure>
+					</a>
+
+					<a href="#" class="featured__wrapper">
+						<figure>
+							<img src="images/sl4.jpg" alt="featured products">
+							<div class="featured__content">
+							<h3 class="title">Men's Spinalq pro</h3>
+								<p class="variant">Black</p>
+								<span class="price">$ 78.99</span>
+								<p class="arrow"><i class="fas fa-long-arrow-alt-right"></i></p>
+							</div>
+						</figure>
+					</a>
+
+					<a href="#" class="featured__wrapper">
+						<figure>
+							<img src="images/sl1.jpg" alt="featured products">
+							<div class="featured__content">
+							<h3 class="title">Men's Spinalq pro</h3>
+								<p class="variant">Black</p>
+								<span class="price">$ 78.99</span>
+								<p class="arrow"><i class="fas fa-long-arrow-alt-right"></i></p>
+							</div>
+						</figure>
+					</a>
+	
+				</div>
+				<button class="glider-next">
+					<i class="fas fa-long-arrow-alt-right"></i>
+				</button>
+				<div class="glider-dots" id="dots"></div>
+			</div>
+		</div>
+	</section>
+	<section class="mission">
+		<div class="container">
+			<div class="mission__wrapper">
+					<img class="logo " src="images/logo1.png" alt="logo" width="200">
+					<h3 class="title">We Specialize in posture correction and pain relief</h3>
+					<p>For 6 years we have worked to ensire europeans access to easy and effective postural correction and pain relief products. Our key philosophy is that we do not sell products that we would not use ourselves. Since 2015 we have had more than 50.000 satisfied customers in the UK and we are intent on having many more in the future.</p>
+					<a href="#" class="btn">our mission and values</a>
+
+			</div>
+		</div>
+	</section>
+	<section id="mixItUp" class="mixitup">
+		<div class="container">
+			<h2>Featured Categories</h2>
+			<ul class="mix mix-menu">
+				<li class="mix-li active"  data-target="all">All</li>
+				<li class="mix-li"  data-target="male">Men</li>
+				<li class="mix-li"  data-target="female">Women</li>
+				<li  class="mix-li" data-target="shoulder">Shoulder Support</li>
+				<li  class="mix-li" data-target="backSupport">Back Support</li>
+				<li  class="mix-li" data-target="ke">Knee & Elbow</li>
+				<li  class="mix-li" data-target="wb">Well Being</li>
+			</ul>
+			</div>
+			<div class="item-wrapper">
+			<div class="container">
+			<ul class="mix mix-item">
+				<li class="item" data-item="male"><img src="images/male1.jpg" alt="mens"><h3>Men Clothing</h3> <p>Black</p><p><b>$56.77</b></p></li>
+				<li class="item" data-item="male"><img src="images/male2.jpg" alt="mens"><h3>Men Clothing</h3> <p>Purple</p><p><b>$56.77</b></p></li>
+				<li class="item" data-item="male"><img src="images/male3.jpg" alt="mens"><h3>Men Clothing</h3> <p>Red</p><p><b>$56.77</b></p></li>
+				<li class="item" data-item="male"><img src="images/male4.jpg" alt="mens"><h3>Men Clothing</h3> <p>Dark Green</p><p><b>$56.77</b></p></li>
+				<li	class="item" data-item="female"><img src="images/female1.jpg" alt="womens"><h3>Women Clothing</h3> <p>Red</p><p><b>$56.77</b></p></li>
+				<li	class="item" data-item="female"><img src="images/female2.jpg" alt="womens"><h3>women Clothing</h3> <p>Dark Green</p><p><b>$56.77</b></p></li>
+				<li	class="item" data-item="female"><img src="images/female3.jpg" alt="womens"><h3>women Clothing</h3> <p>Yellow</p><p><b>$56.77</b></p></li>
+				<li	class="item" data-item="female"><img src="images/female4.jpg" alt="womens"><h3>women Clothing</h3> <p>White</p><p><b>$56.77</b></p></li>
+				<li	class="item" data-item="shoulder"><img src="images/male1.jpg" alt="shoulder support "><h3>Shoulder Support </h3> <p>Orange</p><p><b>$56.79</b></p></li>
+				<li	class="item" data-item="shoulder"><img src="images/sh1.jpg" alt="shoulder support "><h3>Shoulder Support </h3> <p>Blue/white</p><p> <b>$59.77</b></p></li>
+				<li	class="item" data-item="shoulder"><img src="images/sh2.jpg" alt="shoulder support "><h3>Shoulder Support </h3> <p>White</p><p><b>$49.77</b></p></li>
+				<li	class="item" data-item="shoulder"><img src="images/sh3.jpg" alt="shoulder support "><h3>Shoulder Support </h3> <p>Blue</p><p> <b>$99.77</b></p></li>
+				<li	class="item" data-item="backSupport"><img src="images/bs1.jpg" alt="back support"><h3>Shoulder Support </h3> <p>Orange</p><p><b>$56.79</b></p></li>
+				<li	class="item" data-item="backSupport"><img src="images/bs2.jpg" alt="back support"><h3>Shoulder Support </h3> <p>Blue/white</p><p> <b>$59.77</b></p></li>
+				<li	class="item" data-item="backSupport"><img src="images/bs3.jpg" alt="back support"><h3>Shoulder Support </h3> <p>White</p><p><b>$49.77</b></p></li>
+				<li	class="item" data-item="backSupport"><img src="images/bs4.jpg" alt="back support"><h3>Shoulder Support </h3> <p>Blue</p><p> <b>$99.77</b></p></li>
+
+				<li	class="item" data-item="wb"><img src="images/wb1.jpg" alt="bWell Being "><h3>Well being</h3> <p>Orange</p><p><b>$56.79</b></p></li>
+				<li	class="item" data-item="wb"><img src="images/wb2.jpg" alt="Well Being t"><h3>Well being</h3> <p>Blue/white</p><p> <b>$59.77</b></p></li>
+				<li	class="item" data-item="wb"><img src="images/wb3.jpg" alt="bWell Being "><h3>Well being</h3> <p>White</p><p><b>$49.77</b></p></li>
+				<li	class="item" data-item="wb"><img src="images/wb4.jpg" alt="bWell Being "><h3>Well being</h3> <p>Blue</p><p> <b>$99.77</b></p></li>
+
+
+				<li	class="item" data-item="ke"><img src="images/ke1.jpg" alt="bke"><h3>Knees and elbow Support </h3> <p>Orange</p><p><b>$56.79</b></p></li>
+				<li	class="item" data-item="ke"><img src="images/ke2.jpg" alt="bke"><h3>Knees and elbow Support </h3> <p>Blue/white</p><p> <b>$59.77</b></p></li>
+				<li	class="item" data-item="ke"><img src="images/ke3.jpg" alt="bke"><h3>Knees and elbow Support </h3> <p>White</p><p><b>$49.77</b></p></li>
+
+
+			</ul>
+		</div>
+	</div>
+	</section>
+	<section id="trustpilot" class="trustpilot-main">
+		<div class="container">
+			<div class="trustpilot-contain">
+					<h2>Trustpilot</h2>
+				<button class="trustpilot-prev">
+					<i class="fas fa-long-arrow-alt-left"></i>
+				</button>
+
+
+					<div class="trustpilot">
+
+						<a href="#" class="trustpilot__single">
+							<blockquote>
+								<span class="quote"><i class="fas fa-quote-left"></i></span>
+								<figure>
+									<h4>Excellent product and service</h4>
+									<p>I got the mens posture tshirts and have found them really helpful. They immediately made my posture feel stronger and can be worn under shirts at work to help prevent slouching...</p>
+									<span class="tpImage">
+										<img src="images/tps.png" alt="trustpilot">
+										<figcaption>Rob</figcaption>
+									</span>
+								</figure>
+							</blockquote>
+						</a>
+		
+		
+		
+						<a href="#" class="trustpilot__single">
+							<blockquote>
+								<span class="quote"><i class="fas fa-quote-left"></i></span>
+								<figure>
+									<h4>Very pleased</h4>
+									<p>I am very pleased with my active posture shirt and I wear it every day and I feel the benefit already. I certainly know when I am not wearing it and I bought another one today so i don't suffer when its in the wash.</p>
+									<span class="tpImage">
+										<img src="images/tps.png" alt="trustpilot">
+										<figcaption>Callum Y.</figcaption>
+									</span>
+								</figure>
+							</blockquote>
+						</a>
+			
+		
+		
+						<a href="#" class="trustpilot__single">
+							<blockquote>
+								<span class="quote"><i class="fas fa-quote-left"></i></span>
+								<figure>
+									<h4>Amazing Pain relief</h4>
+									<p>Wow, brilliant product. I have chronic neck and shoulder pain from an old injury. Despite products to assist with computer positioning I find desk-based work results in increased pain....</p>
+									<span class="tpImage">
+										<img src="images/tps.png" alt="trustpilot">	
+										<figcaption>Terri G.</figcaption>
+									</span>
+								</figure>
+							</blockquote>
+						</a>
+						<a href="#" class="trustpilot__single">
+							<blockquote>
+								<span class="quote"><i class="fas fa-quote-left"></i></span>
+								<figure>
+									<h4>Excellent product and service</h4>
+									<p>I got the mens posture tshirts and have found them really helpful. They immediately made my posture feel stronger and can be worn under shirts at work to help prevent slouching...</p>
+									<span class="tpImage">
+										<img src="images/tps.png" alt="trustpilot">
+										<figcaption>Rob</figcaption>
+									</span>
+								</figure>
+							</blockquote>
+						</a>
+		
+		
+		
+						<a href="#" class="trustpilot__single">
+							<blockquote>
+								<span class="quote"><i class="fas fa-quote-left"></i></span>
+								<figure>
+									<h4>Very pleased</h4>
+									<p>I am very pleased with my active posture shirt and I wear it every day and I feel the benefit already. I certainly know when I am not wearing it and I bought another one today so i don't suffer when its in the wash.</p>
+									<span class="tpImage">
+										<img src="images/tps.png" alt="trustpilot">
+										<figcaption>Callum Y.</figcaption>
+									</span>
+								</figure>
+							</blockquote>
+						</a>
+			
+		
+		
+						<a href="#" class="trustpilot__single">
+							<blockquote>
+								<span class="quote"><i class="fas fa-quote-left"></i></span>
+								<figure>
+									<h4>Amazing Pain relief</h4>
+									<p>Wow, brilliant product. I have chronic neck and shoulder pain from an old injury. Despite products to assist with computer positioning I find desk-based work results in increased pain....</p>
+									<span class="tpImage">
+										<img src="images/tps.png" alt="trustpilot">	
+										<figcaption>Terri G.</figcaption>
+									</span>
+								</figure>
+							</blockquote>
+						</a>
+					</div>
+					<button class="trustpilot-next">
+						<i class="fas fa-long-arrow-alt-right"></i>
+					</button>
+					<div class="trustpilot-dots" id="trustpilot-dots"></div>
+			</div>
+
+			<div class="tpImageLogo"><img src="images/tp.png" alt="trustpilot" width="200"></div>
+		</div>
+	</section>
+
+	<section class="posture">
+		<div class="container posture__content">
+			<h2>Pain relief with posture clothing</h2>
+			<div class="posture__content-infoText"><a class="tags" title="please click on red animated spots to your right."><i class="fas fa-info"></i></a><p>Please select body areas where you experience pain and tensions.</p></div>
+			<div class="posture__figure">
+				<img src="images/figure.png" alt="figure" class="posture__figure-img">
+				<span id="span-1" class="posture__figure-circle"><i class="fas fa-plus"></i></span>
+				<span id="span-2" class="posture__figure-circle"><i class="fas fa-plus"></i></span>
+				<span id="span-3" class="posture__figure-circle"><i class="fas fa-plus"></i></span>
+				<span id="span-4" class="posture__figure-circle show"><i class="fas fa-plus"></i></span>
+				<span id="span-5" class="posture__figure-circle"><i class="fas fa-plus"></i></span>
+			</div>
+	
+				<div id="span-1-content" class="posture__content-item content-1">
+					<h3>Headache?</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab hic fugiat eaque autem laudantium consectetur atque iste, consequuntur vel veritatis!</p>
+					<a href="#" class="btn">Read More</a>
+				</div>
+
+				<div id="span-2-content" class="posture__content-item content-2 ">
+					<h3>Neck pain?</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab hic fugiat eaque autem laudantium consectetur atque iste, consequuntur vel veritatis!</p>
+					<a href="#" class="btn">Read More</a>
+				</div>
+
+				<div id="span-3-content" class="posture__content-item content-3">
+					<h3>Shoulder pain?</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab hic fugiat eaque autem laudantium consectetur atque iste, consequuntur vel veritatis!</p>
+					<a href="#" class="btn">Read More</a>
+				</div>
+
+				<div id="span-4-content" class="posture__content-item content-4 show">
+					<h3>Upper Back pain?</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab hic fugiat eaque autem laudantium consectetur atque iste, consequuntur vel veritatis!</p>
+					<a href="#" class="btn">Read More</a>
+				</div>
+
+				<div id="span-5-content" class="posture__content-item content-5 ">
+					<h3>Lower Back Pain?</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab hic fugiat eaque autem laudantium consectetur atque iste, consequuntur vel veritatis!</p>
+					<a href="#" class="btn">Read More</a>
+				</div>
+			</div>
+	</section>
+	<section id="relief" class="relief">
+		<div class="relief__wrapper">
+			<div class="container">
+				<h2>Pain reducing recomendations</h2>
+				<div class="relief__wrapper-btns">
+						<span  id="btn-1"  class="relief__wrapper-btns-btn ">Working on Desk</span>
+						<span  id="btn-2"  class="relief__wrapper-btns-btn active">Standing All Day</span>
+						<span id="btn-3"  class="relief__wrapper-btns-btn ">Working in Stock</span>
+				</div>
+				<div class="relief__wrapper-content">
+					<div id="btn-1-content"  class="relief__wrapper-content-img ">
+						<img src="images/female1.jpg" alt="femail">
+						<div class="relief__wrapper-content-text">
+							<h3>Working on Desk could be a problem</h3>
+							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque qui sapiente soluta repellat dignissimos iste, ea, magni assumenda sint voluptatibus pariatur fugiat, tempore voluptates molestiae blanditiis sequi exercitationem nemo autem minima. Adipisci provident perferendis beatae quae culpa mollitia rerum at! Ipsam recusandae corporis, eveniet explicabo sapiente dolor quos ad suscipit qui at quae nihil officiis voluptatum cum minus provident veniam?</p>
+							<a href="#" class="relief__wrapper-content-text-btn">Read More </a>
+						</div>
+					</div>
+					<div id="btn-2-content"  class="relief__wrapper-content-img active">
+						<img src="images/male1.jpg" alt="femail">
+						<div class="relief__wrapper-content-text">
+							<h3>Standing all day might be injurious</h3>
+							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque qui sapiente soluta repellat dignissimos iste, ea, magni assumenda sint voluptatibus pariatur fugiat, eveniet explicabo sapiente dolor quos ad suscipit qui at quae nihil officiis voluptatum cum minus provident veniam?</p>
+							<a href="#" class="relief__wrapper-content-text-btn">Read More </a>
+						</div>
+					</div>
+					<div id="btn-3-content"  class="relief__wrapper-content-img">
+						<img src="images/female2.jpg" alt="femail">
+						<div class="relief__wrapper-content-text">
+							<h3>Working in stock might be problematic</h3>
+							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque qui sapiente soluta repellat dignissimos iste, ea, magni assumenda sint voluptatibus pariatur fugiat, tempore voluptates molestiae blanditiis sequi exercitationem nemo autem minima. Adipisci provident perferendis beatae quae culpa mollitia rerum at! Ipsam recusandae corporis, Itaque qui sapiente soluta repellat dignissimos iste, ea, magni assumenda sint voluptatibus pariatur fugiat, tempore voluptates molestiae blanditiis sequi exercitationem nemo autem minima.</p>
+							<a href="#" class="relief__wrapper-content-text-btn">Read More </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="video" class="video">
+		<div class="container">
+			<h2>The Posture Shirt <sup>TM</sup></h2>
+			<div class="video__wrapper">
+				<iframe class="yt-container " id="player" style="display: none;" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="1296" height="675" src="https://www.youtube.com/embed/A2rIGlsISZE?rel=0&amp;controls=0&amp;showinfo=0&amp;theme=light&amp;autohide=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.anodyne-shop.ch&amp;widgetid=1" data-gtm-yt-inspected-1_25="true"></iframe>
+				
+				<img class="responsive" id="play_vid" src="https://sw9336.smartweb-static.com/upload_dir/blog/video_cover2.jpg" style="cursor:pointer !important;">
+				<span class="video__wrapper-play" id="span-btn"><i class="fas fa-play"></i></span>
+			</div>
+
+			<div class="dots"><img src="images/dots.png" alt="decoration tool" class="dots-png"></div>
+
+		</div>
+	</section>
+	<section id="info" class="infobar">
+		<div class="container">
+			<div class="infobar__wrapper">
+				<div class="infobar__wrapper-single">
+					<span class="icon"><img src="images/tilfreds.png" alt="trilfreds"></span>
+					<h3>POSTURE CLOTHING WITH 100% SATISFACTION GUARANTEE</h3>
+					<p>Peace of mind: At ActivePosture® we always offer free returns and a generous 60-day risk-free trial period of our products. Use your new product for all your everyday activities and find out if it lives up to your expectations. With our 100% satisfaction guarantee you can return the product, despite it being used, within 60 days for a full refund, no questions asked. We provide a prepaid return label for this purpose.</p>
+					<a href="#" class="btn">See Collection</a>
+				</div>
+				<div class="infobar__wrapper-single">
+					<span class="icon"><img src="images/infoIcon.png" alt="infor"></span>
+					<h3>THE ORIGINAL POSTURE CLOTHING FOR POSTURE CORRECTION</h3>
+					<p>The original posture clothing from ActivePosture®  is the only one registered as a medical device and can be bought on www.activeposture.co.uk. We are a UK-based company which gives you peace of mind that should you end up with a faulty product or just decide that it is not a product for you, you can easily return it and at no cost, as we provide a prepaid return label.</p>
+					<a href="#" class="btn">See Collection</a>
+				</div>
+				<div class="infobar__wrapper-single">
+					<span class="icon"><img src="images/kinoIcon.png" alt="kinoIcon"></span>
+					<h3>FROM KINESIOTAPE TO POSTURE CLOTHING</h3>
+					<p>Posture corrective clothing activates the back muscles, shoulders and shoulder blades without bracing your muscles or joints. The technology behind ActivePosture's posture clothing is inspired by Kinesiotape - a treatment method often used by physiotherapists and chiropractors to treat pain and tension in the neck, shoulders and back. Kinesiotaping is also frequently used by professional athletes to stimulate specific muscle groups and for posture correction.</p>
+					<a href="#" class="btn">See Collection</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="dots"><img src="images/dots.png" alt="decoration tool" class="dots-png"></div>
+			<div class="footer__links">
+				<div class="footer__links-section 1">
+					<h3>Help & Informatiion</h3>
+					<ul class="footer__links-ul">
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">FAQ</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Shipping & Return</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Sizeguide</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Product overview</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Terms & Conditions</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="footer__links-section 2">
+					<h3>About Active Posture</h3>
+					<ul class="footer__links-ul">
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">FAQ</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Shipping & Return</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Sizeguide</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Product overview</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Terms & Conditions</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="footer__links-section 3">
+					<h3>Our Partners</h3>
+					<ul class="footer__links-ul">
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">FAQ</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Shipping & Return</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Sizeguide</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Product overview</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Terms & Conditions</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="footer__links-section 4">
+					<h3>Contact</h3>
+					<ul class="footer__links-ul">
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">FAQ</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Shipping & Return</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Sizeguide</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Product overview</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Terms & Conditions</a></li>
+						<li class="footer__links-ul-li"><a href="#" class="footer__links-ul-li-a">Privacy Policy</a></li>
+					</ul>
+				</div>
+			</div>
+			<p class="footer__copy"> &copy; Anodyne ApS, P.O. Pedersens Vej 9, 8200 Aarhus N, Danmark (NB! Ingen salg fra adressen). CVR-nummer: 37167053.</p>
+		</div>
+	</footer>
+	<script src="./assets/js/glider.min.js"></script>
+	<script src="./assets/js/app2.js"></script>
+</body>
+</html>

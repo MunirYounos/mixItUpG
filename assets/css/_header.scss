@@ -39,8 +39,8 @@
 					left: 0;
 				}
 			}
-			@media(min-width: 769px){
-			 display: none;
+			@include size(tablet){
+				display: none;
 			}
 			&:hover{
 				background-color: lighten($primary-clr, 20%);
@@ -57,19 +57,18 @@
 		text-transform: uppercase;
 		letter-spacing: 5px;
 		font-style: italic;
-		@media(max-width: 768px){
+		@include size(phone){
 			padding-left: 1rem;
 		}
 		p{
 			padding-right: 1rem;
-
 		}
 	}
 	&__ul{
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		@media(max-width: 768px){
+		@include size(phone){
 			display: none;
 		}
 		&.header__user-cart{
@@ -113,9 +112,12 @@
 				&.user,&.basket{
 					font-size: 1.5rem;
 					margin-top: -0.8rem;
+
 				}
 				&.basket::before{
+					content: "2";
 					top:-0.8rem;
+
 				}
 				&:hover{
 					color: $primary-clr;

@@ -201,11 +201,10 @@ pulseVidBtn.addEventListener('click', function (e) {
 	pulseVidBtn.style.display = 'none';
 });
 
-
-const conterNew = document.getElementById('counterNew');
+const counterNew = document.getElementById('counterNew');
 const settings = {
 	'Title': 'Spring sale - save 25% on all - sale ends in: ',
-	'End_time': 'May 16, 2021 23:59:59',
+	'End_time': 'May 19, 2021 10:23:59',
 	'Days': 'Days',
 	'Hours': 'Hours',
 	'Minutes': 'Minutes',
@@ -217,7 +216,7 @@ function addZero(n) {
 	return (parseInt(n, 10) < 10 ? '0' : '') + n;
 }
 
-let template = document.createElement('div');
+let template = document.createElement('section');
 template.classList = 'new-counter wrapper';
 template.innerHTML = `<h4 id="head">${settings['Title']}</h4>
         <ul class="counter__wrapper">
@@ -228,7 +227,9 @@ template.innerHTML = `<h4 id="head">${settings['Title']}</h4>
         </ul>
 				<a class="new-counter-btn" href="${settings['Link']}">See discount here</a>
 				`;
-conterNew.prepend(template);
+
+
+
 
 const second = 1000,
 	minute = second * 60,
@@ -241,6 +242,11 @@ if (isValidDate(new Date(settings['End_time']))) {
 		let now = new Date().getTime(),
 			distance = countDown - now;
 
+
+		if (distance > 0) {
+			counterNew.prepend(template);
+		}
+
 		document.querySelector('.new-counter #days').innerText = Math.floor(distance / (day)),
 			document.querySelector('.new-counter #hours').innerText = addZero(Math.floor((distance % (day)) / (hour))),
 			document.querySelector('.new-counter #minutes').innerText = addZero(Math.floor((distance % (hour)) / (minute))),
@@ -250,7 +256,6 @@ if (isValidDate(new Date(settings['End_time']))) {
 		if (distance < 0) {
 			clearInterval(x);
 			document.querySelector('.new-counter.wrapper').style.display = 'none';
-			console.log('The countdown has finished');
 		}
 
 	}, second);
@@ -261,3 +266,4 @@ if (isValidDate(new Date(settings['End_time']))) {
 function isValidDate(d) {
 	return d instanceof Date && !isNaN(d);
 }
+
