@@ -204,7 +204,7 @@ pulseVidBtn.addEventListener('click', function (e) {
 const counterNew = document.getElementById('counterNew');
 const settings = {
 	'Title': 'Spring sale - save 25% on all - sale ends in: ',
-	'End_time': 'May 19, 2021 10:23:59',
+	'End_time': 'May 29, 2021 10:23:59',
 	'Days': 'Days',
 	'Hours': 'Hours',
 	'Minutes': 'Minutes',
